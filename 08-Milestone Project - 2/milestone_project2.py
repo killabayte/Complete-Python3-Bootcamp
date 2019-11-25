@@ -25,7 +25,7 @@ class Deck:
                 self.deck.append(Card(suit, rank))
 
     def __str__(self):
-        # Why we should use this fucking trick with strings instead of print(self.deck)??? O_o
+        # Why we should use this f@ing trick with strings instead of print(self.deck)??? O_o
         empty_string = ""
         for card in self.deck:
             empty_string += '\n '+card.__str__()
