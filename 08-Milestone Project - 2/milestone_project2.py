@@ -84,18 +84,18 @@ class Game:
         self.deck.shuffle()
 
         self.player_hand = Hand()
-        self.player_hand.add_card(deck.deal())
-        self.player_hand.add_card(deck.deal())
+        self.player_hand.add_card(self.deck.deal())
+        self.player_hand.add_card(self.deck.deal())
 
         self.dealer_hand = Hand()
-        self.dealer_hand.add_card(deck.deal())
-        self.dealer_hand.add_card(deck.deal())
+        self.dealer_hand.add_card(self.deck.deal())
+        self.dealer_hand.add_card(self.deck.deal())
 
     def show_some(self):
         print("\nDealer's Hand:")
         print(" <card hidden>")
-        print("", self.dealer.cards[1])
-        print("\nPlayer's Hand:", *self.player.cards, sep="\n ")
+        print("", self.dealer_hand.cards[1])
+        print("\nPlayer's Hand:", *self.player_hand.cards, sep="\n ")
 
     def hit_or_stand(self):
         player_action = wait_for_input("Would you like to Hit or Stand? Enter 'h' or 's' ", str, 'hs')
@@ -109,7 +109,7 @@ class Game:
             return False
 
     def hit(self):
-        self.player_hand.add_card(deck.deal())
+        self.player_hand.add_card(self.deck.deal())
         self.player_hand.adjust_for_ace()
 
 
