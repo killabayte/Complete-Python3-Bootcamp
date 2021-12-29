@@ -40,4 +40,3 @@ Many thanks!
 Many thanks!
 Many thanks!
 Many thanks!
-Many thanks!
